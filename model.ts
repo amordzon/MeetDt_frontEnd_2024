@@ -1,4 +1,4 @@
-export type Color = 'dark' | 'mid' | 'light';
+export type Color = "dark" | "mid" | "light";
 
 export interface Layout {
   title?: string;
@@ -21,7 +21,7 @@ export interface Element {
  * Displays the text.
  */
 export interface TextTile extends Element {
-  type: 'textTile';
+  type: "textTile";
   title?: string;
   text?: string;
   color?: Color;
@@ -31,7 +31,7 @@ export interface TextTile extends Element {
  * Displays an image.
  */
 export interface ImageTile extends Element {
-  type: 'imageTile';
+  type: "imageTile";
   title: string;
   source: string;
 }
@@ -40,7 +40,7 @@ export interface ImageTile extends Element {
  * Hosts a button that performs an action on click.
  */
 export interface ButtonTile extends Element {
-  type: 'buttonTile';
+  type: "buttonTile";
   text: string;
   action: Action;
 }
@@ -49,7 +49,7 @@ export interface ButtonTile extends Element {
  * Splits available space horizontally evenly across all child elements.
  */
 export interface HorizontalSplitter extends Element {
-  type: 'horizontalSplitter';
+  type: "horizontalSplitter";
   elements: ElementsType[];
 }
 
@@ -57,7 +57,7 @@ export interface HorizontalSplitter extends Element {
  * Splits available space vertically evenly across all child elements.
  */
 export interface VerticalSplitter extends Element {
-  type: 'verticalSplitter';
+  type: "verticalSplitter";
   elements: ElementsType[];
 }
 
@@ -65,7 +65,7 @@ export interface VerticalSplitter extends Element {
  * Executable action. Payload(value) depends on the action type.
  */
 export interface Action {
-  type: 'update';
+  type: "update";
   referenceElementkey: string;
   value: {
     [key: string]: string;
