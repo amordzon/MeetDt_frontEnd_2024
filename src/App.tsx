@@ -1,14 +1,24 @@
 import * as React from "react";
 import "./style.css";
+import axios from "axios";
 
 export default function App() {
   // load definition here
+  const [data, setData] = React.useState([]);
 
-  return (
-    <div className="main">
-      {/* TODO remove title usage from template */}
-      <h1>{"Place you components here 👇"}</h1>
-      <div className="content"></div>
-    </div>
-  );
+  const fetchData = async () => {
+    try {
+      const response = await axios.get("https://localhost:3000/rootElement");
+      console.log(response.data);
+      setData(response.data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+  React.useEffect(() => {
+    fetchData();
+  }, []);
+
+  return <></>;
 }
