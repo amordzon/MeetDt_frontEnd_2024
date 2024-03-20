@@ -4,7 +4,7 @@ import { ButtonTile } from "../model";
 const ButtonTileComponent: React.FC<ButtonTile> = ({ text, action }) => {
   return (
     <div>
-      <button>{text}</button>;
+      <button>{text}</button>
     </div>
   );
 };

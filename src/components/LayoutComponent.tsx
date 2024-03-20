@@ -7,7 +7,9 @@ const LayoutComponent: React.FC<Layout> = ({ title, rootElement }) => {
   return (
     <div className="main">
       <h1>{title}</h1>
-      <div className="content">{element}</div>
+      <div className="content">
+        <div className="inner-content">{element}</div>
+      </div>
     </div>
   );
 };

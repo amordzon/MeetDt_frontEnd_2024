@@ -35,3 +35,75 @@ body {
 }
 
 /* place your styles below */
+
+.inner-content div {
+  border-radius: 10px; /* Dziedziczenie zaokrąglenia narożników od kontenera .content */
+}
+
+.dark {
+  background-color: #1b1c2e;
+}
+
+.mid {
+  background-color: #242538;
+}
+
+.light {
+  background-color: #b6b6cc;
+}
+
+.inner-content {
+  box-sizing: border-box;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+.vertical-splitter {
+  display: flex;
+  flex-direction: row;
+  min-width: 100%;
+  min-height: 100%;
+  gap: 10px;
+}
+
+.vertical-splitter > div {
+  min-width: 100px;
+  flex-basis: 0px;
+  flex-grow: 1;
+}
+
+.horizontal-splitter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.horizontal-splitter > div {
+  flex-grow: 1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.text-tile {
+  color: #d6d6e9;
+  padding: 10px;
+}
+.text-tile > h4 {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+button {
+  width: 100%;
+  height: 100%;
+  background-color: #1b1c2e;
+  color: #d6d6e9;
+  cursor: pointer;
+  border-radius: 10px;
+}
