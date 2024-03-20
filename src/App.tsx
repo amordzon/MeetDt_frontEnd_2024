@@ -1,15 +1,16 @@
 import * as React from "react";
 import "./style.css";
 import axios from "axios";
+import LayoutComponent from "./components/LayoutComponent";
+import { Layout } from "./model";
 
 export default function App() {
   // load definition here
-  const [data, setData] = React.useState([]);
+  const [data, setData] = React.useState<Layout>();
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("https://localhost:3000/rootElement");
-      console.log(response.data);
+      const response = await axios.get<Layout>("http://localhost:3000/data");
       setData(response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -20,5 +21,12 @@ export default function App() {
     fetchData();
   }, []);
 
-  return <></>;
+  console.log(data);
+  return (
+    <>
+      {data && (
+        <LayoutComponent title={data.title} rootElement={data.rootElement} />
+      )}
+    </>
+  );
 }

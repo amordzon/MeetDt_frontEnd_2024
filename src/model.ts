@@ -16,7 +16,6 @@ export interface Element {
   type: string;
   elementKey: string;
 }
-
 /**
  * Displays the text.
  */
