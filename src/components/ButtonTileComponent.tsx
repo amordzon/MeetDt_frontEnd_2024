@@ -1,10 +1,14 @@
 import React from "react";
 import { ButtonTile } from "../model";
 
-const ButtonTileComponent: React.FC<ButtonTile> = ({ text, action }) => {
+const ButtonTileComponent: React.FC<ButtonTile> = ({
+  text,
+  action,
+  elementKey,
+}) => {
   return (
     <div>
-      <button>{text}</button>
+      <button id={elementKey}>{text}</button>
     </div>
   );
 };

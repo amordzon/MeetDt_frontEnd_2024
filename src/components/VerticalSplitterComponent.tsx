@@ -4,9 +4,10 @@ import useRenderElement from "../hooks/useRenderElement";
 
 const VerticalSplitterComponent: React.FC<VerticalSplitter> = ({
   elements,
+  elementKey,
 }) => {
   return (
-    <div className="vertical-splitter">
+    <div className="vertical-splitter" id={elementKey}>
       {elements.map((element) => useRenderElement(element))}
     </div>
   );
