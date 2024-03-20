@@ -17,6 +17,7 @@ const useRenderElement = (element: ElementsType) => {
           color={element.color}
           elementKey={element.elementKey}
           type={element.type}
+          key={element.elementKey}
         />
       );
     case "imageTile":
@@ -26,6 +27,7 @@ const useRenderElement = (element: ElementsType) => {
           source={element.source}
           type={element.type}
           elementKey={element.elementKey}
+          key={element.elementKey}
         />
       );
     case "buttonTile":
@@ -35,6 +37,7 @@ const useRenderElement = (element: ElementsType) => {
           action={element.action}
           type={element.type}
           elementKey={element.elementKey}
+          key={element.elementKey}
         />
       );
     case "horizontalSplitter":
@@ -43,6 +46,7 @@ const useRenderElement = (element: ElementsType) => {
           elements={element.elements}
           type={element.type}
           elementKey={element.elementKey}
+          key={element.elementKey}
         />
       );
     case "verticalSplitter":
@@ -51,6 +55,7 @@ const useRenderElement = (element: ElementsType) => {
           elements={element.elements}
           type={element.type}
           elementKey={element.elementKey}
+          key={element.elementKey}
         />
       );
   }
