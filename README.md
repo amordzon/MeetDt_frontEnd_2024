@@ -6,6 +6,15 @@ Prepare react application that will render **any** interactive card layout based
 
 You can start with [StackBlitz ⚡️ template](https://stackblitz.com/edit/template-dt-ts)
 
+### Usage:
+```
+npx json-server ./src/resources/example.json
+```
+and then
+```
+npm start
+```
+
 ### Resources:
 
 - All elements types can be found in `model.ts` file.
