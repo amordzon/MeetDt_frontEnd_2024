@@ -5,6 +5,7 @@ import DataContext from "../DataContext";
 const useFindElementByIdAndUpdate = () => {
   const dataContext = useContext(DataContext);
 
+  // find element by id and update it with action value
   const findElementByIdAndUpdate = useCallback(
     (currentElement: ElementsType, action: Action): ElementsType => {
       if (currentElement.elementKey === action.referenceElementKey) {

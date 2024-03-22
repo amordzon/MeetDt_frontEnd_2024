@@ -37,7 +37,7 @@ body {
 /* place your styles below */
 
 .inner-content div {
-  border-radius: 10px; /* Dziedziczenie zaokrąglenia narożników od kontenera .content */
+  border-radius: 10px;
 }
 
 .dark {
