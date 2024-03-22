@@ -7,7 +7,6 @@ import HorizontalSplitterComponent from "../components/HorizontalSplitterCompone
 import VerticalSplitterComponent from "../components/VerticalSplitterComponent";
 
 const useRenderElement = (element: ElementsType) => {
-  console.log(element);
   switch (element.type) {
     case "textTile":
       return (

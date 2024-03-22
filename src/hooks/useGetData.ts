@@ -3,7 +3,7 @@ import axios from "axios";
 import { Layout } from "../model";
 
 const useGetData = () => {
-  const [data, setData] = useState<Layout | null>(null); // Ustawiamy początkową wartość na null, ponieważ dane będą ładowane asynchronicznie
+  const [data, setData] = useState<Layout | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,7 +18,7 @@ const useGetData = () => {
     fetchData();
   }, []);
 
-  return data;
+  return { data, setData };
 };
 
 export default useGetData;
